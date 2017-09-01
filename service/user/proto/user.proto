@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+service User {
+  rpc GetName (NameRequest) returns (NameReply) {}
+}
+
+// The request message containing the user's name.
+message NameRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message NameReply {
+  string message = 1;
+}
